@@ -14,7 +14,12 @@ namespace RozetkaTests.Pages
 
         [FindsBy(How = How.CssSelector, Using = "a[href = 'https://rozetka.com.ua/notebooks/asus/c80004/v004/']")]
         public IWebElement asusCatalogMenuLink;
-                          
+
+        [FindsBy(How = How.CssSelector, Using = ".header-actions__dummy-content.header-actions__dummy-content_type_cart")]
+        public IWebElement headerPopUpBasket;
+
+        [FindsBy(How = How.CssSelector, Using = "a[href='https://my.rozetka.com.ua/cart/']")]
+        public IWebElement basketButton;
     }
 
 }

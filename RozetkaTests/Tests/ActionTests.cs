@@ -31,7 +31,7 @@ namespace RozetkaTests.Tests
 
         [Test]
 
-        public void OpenSectionLeptopAsus_PositiveTest ()
+        public void OpenSectionLeptopAsus_PositiveTest()
         {
             // Arrange
 
@@ -48,16 +48,25 @@ namespace RozetkaTests.Tests
             // Assert
 
             Assert.True(currentText.Contains(expectedText), $"Page not have expected text. CurrentText= {currentText} expectedText= {expectedText}");
-
-            
-
-
-
-
-            Thread.Sleep(6000);
-
-
         }
+
+        [Test]
+
+        public void    ShowTextPopupUnderBusket()
+        {
+            // Act
+            Actions actions = new Actions(driver);
+            MainPage mainPage = new MainPage(driver);
+
+            actions.MoveToElement(mainPage.basketButton).Perform();
+            var text = WebElementHelpers.GetText(mainPage.headerPopUpBasket);
+            Console.WriteLine(text);
+            
+            //Thread.Sleep(6000);
+        }
+
+
+        
         
 
 
