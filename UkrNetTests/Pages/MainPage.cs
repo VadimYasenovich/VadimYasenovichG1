@@ -17,10 +17,5 @@ namespace UkrNetTests.Pages
 
         [FindsBy(How = How.CssSelector, Using = "input[id = 'search-input']")]
         public IWebElement searchInput;
-
-
-
-
-
     }
 }

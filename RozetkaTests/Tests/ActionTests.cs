@@ -5,7 +5,6 @@ using OpenQA.Selenium.Interactions;
 using RozetkaTests.Pages;
 using RozetkaTests.Utils;
 using System;
-using System.Threading;
 
 namespace RozetkaTests.Tests
 {
@@ -60,15 +59,7 @@ namespace RozetkaTests.Tests
 
             actions.MoveToElement(mainPage.basketButton).Perform();
             var text = WebElementHelpers.GetText(mainPage.headerPopUpBasket);
-            Console.WriteLine(text);
-            
-            //Thread.Sleep(6000);
+            Console.WriteLine(text);            
         }
-
-
-        
-        
-
-
     }
 }

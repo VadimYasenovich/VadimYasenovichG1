@@ -38,12 +38,7 @@ namespace UkrNetTests.Tests
             text = XmlHelpers.GetNodeText("PasswordCorrect1");
             IWebElementHelpers.InputTextInToField(driver, mainPage.PasswordInput, text);
                         
-            Thread.Sleep(6000);
-            
-            
+            Thread.Sleep(6000);           
         }
-
-       
-
     }
 }

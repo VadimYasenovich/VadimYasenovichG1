@@ -15,8 +15,8 @@ namespace UkrNetTests.Utils
             var xmlDoc = new XmlDocument();
             xmlDoc.Load(pathToFile);
             return xmlDoc;
-
         }
+
         public static XmlNode GetNodeByTagName(string nodeTagName, string filePath)
         {
             var xmlDoc = CreateXml(filePath);
