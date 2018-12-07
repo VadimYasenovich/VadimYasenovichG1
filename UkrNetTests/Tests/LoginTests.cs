@@ -4,6 +4,7 @@ using OpenQA.Selenium.Chrome;
 using System;
 using System.Threading;
 using UkrNetTests.Pages;
+using UkrNetTests.Utils;
 
 namespace UkrNetTests.Tests
 {
@@ -37,8 +38,15 @@ namespace UkrNetTests.Tests
             mainPage.searchInput.SendKeys("Test");
 
             Thread.Sleep(2000);
+            
+        }
 
+        [Test]
 
+        public void TestXml()
+        {
+            var node = XmlHelpers.GetNodeByTagName("LoginCorrect1", "Data/XMLFile1.xml");
+            Console.WriteLine(node);
         }
 
     }
