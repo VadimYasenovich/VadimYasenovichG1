@@ -14,10 +14,7 @@ namespace RozetkaTests.Pages
 
         [FindsBy(How = How.CssSelector, Using = "a[href = 'https://rozetka.com.ua/notebooks/asus/c80004/v004/']")]
         public IWebElement asusCatalogMenuLink;
-
-
-
-        
+                          
     }
 
 }

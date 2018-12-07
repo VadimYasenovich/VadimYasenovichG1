@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 using RozetkaTests.Pages;
+using RozetkaTests.Utils;
 using System;
 using System.Threading;
 
@@ -30,14 +31,26 @@ namespace RozetkaTests.Tests
 
         [Test]
 
-        public void LinkAsus ()
+        public void OpenSectionLeptopAsus_PositiveTest ()
         {
+            // Arrange
+
+            var expectedText = "Ноутбуки Asus";
+
+            // Act
             Actions actions = new Actions(driver);
             MainPage mainPage = new MainPage(driver);
 
-            actions.Click(mainPage.catalogButton);
-            Thread.Sleep(2000);
-            actions.Click(mainPage.asusCatalogMenuLink);
+            actions.Click(mainPage.catalogButton).MoveToElement(mainPage.asusCatalogMenuLink).Click().Perform();
+            AsusLeptopSectionPage asusLeptopSectionPage = new AsusLeptopSectionPage(driver);
+            var currentText = WebElementHelpers.GetText(asusLeptopSectionPage.nameOfSection);
+
+            // Assert
+
+            Assert.True(currentText.Contains(expectedText), "Wrong" + "currentText= " + currentText + " expectedText= " + expectedText);
+
+            
+
 
 
 
