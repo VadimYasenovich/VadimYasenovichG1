@@ -47,7 +47,7 @@ namespace RozetkaTests.Tests
 
             // Assert
 
-            Assert.True(currentText.Contains(expectedText), "Wrong" + "currentText= " + currentText + " expectedText= " + expectedText);
+            Assert.True(currentText.Contains(expectedText), $"Page not have expected text. CurrentText= {currentText} expectedText= {expectedText}");
 
             
 
