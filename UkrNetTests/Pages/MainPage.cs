@@ -9,13 +9,18 @@ namespace UkrNetTests.Pages
         {
             PageFactory.InitElements(driver, this);            
         }
-        [FindsBy(How = How.CssSelector, Using = "input[class='form__input'][type='Text'][name='login']")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='d - input - login']")]
         public IWebElement loginInput;
+
+        [FindsBy(How = How.CssSelector, Using = "# id-input-password")]
+        public IWebElement PasswordInput;
 
         [FindsBy(How = How.CssSelector, Using = "input[id = 'search-input']")]
         public IWebElement searchInput;
 
-       
+
+
+
 
     }
 }

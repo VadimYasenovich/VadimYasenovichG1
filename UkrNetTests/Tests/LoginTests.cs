@@ -30,24 +30,20 @@ namespace UkrNetTests.Tests
 
         [Test]
 
-        public void TestMethod1()
+        public void TestLogin()
         {
             MainPage mainPage = new MainPage(driver);
-            mainPage.searchInput.Click();
-            mainPage.searchInput.Clear();
-            mainPage.searchInput.SendKeys("Test");
-
-            Thread.Sleep(2000);
+            var text = XmlHelpers.GetNodeText("LoginCorrect1");
+            IWebElementHelpers.InputTextInToField(driver, mainPage.loginInput, text);
+            text = XmlHelpers.GetNodeText("PasswordCorrect1");
+            IWebElementHelpers.InputTextInToField(driver, mainPage.PasswordInput, text);
+                        
+            Thread.Sleep(6000);
+            
             
         }
 
-        [Test]
-
-        public void TestXml()
-        {
-            var node = XmlHelpers.GetNodeByTagName("LoginCorrect1", "Data/XMLFile1.xml");
-            Console.WriteLine(node);
-        }
+       
 
     }
 }

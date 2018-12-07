@@ -1,6 +1,15 @@
-﻿namespace UkrNetTests.Utils
+﻿using OpenQA.Selenium;
+
+namespace UkrNetTests.Utils
 {
-    class IWebElementHelpers
+    public static class IWebElementHelpers
     {
+        public static void InputTextInToField(IWebDriver driver, IWebElement element, string text)
+        {
+            element.Click();
+            element.Clear();
+            element.SendKeys(text);
+        }
+
     }
 }
