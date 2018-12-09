@@ -9,7 +9,7 @@ namespace UkrNetTests.Pages
         {
             PageFactory.InitElements(driver, this);            
         }
-        [FindsBy(How = How.XPath, Using = "//*[@id='d - input - login']")]
+        [FindsBy(How = How.XPath, Using = "#id-input-login")]
         public IWebElement loginInput;
 
         [FindsBy(How = How.CssSelector, Using = "# id-input-password")]

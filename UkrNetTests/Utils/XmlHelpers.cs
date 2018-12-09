@@ -32,7 +32,7 @@ namespace UkrNetTests.Utils
             return node;
         }
 
-        public static string GetNodeText(string nodeTagName, string filePath = "D:/Test/KnowlegeBase/Autotests/VadimYasenovichG1/UkrNetTests/Data/XMLFile1.xml")
+        public static string GetNodeText(string nodeTagName, string filePath = "Data/XMLFile1.xml")
         {
             XmlNode node = GetNodeByTagName(nodeTagName, filePath);
             return node.InnerText;
